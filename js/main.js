@@ -278,3 +278,28 @@ function basicOp(operation, value1, value2) {
         return value1 / value2
     }
 }
+
+
+
+
+
+
+
+
+// Сможете ли вы найти иголку в стоге сена?
+
+// Напишите функцию findNeedle(), которая принимает arrayполный мусор, но содержит один"needle"
+
+// После того, как ваша функция найдет иглу, она должна вернуть сообщение (в виде строки), в котором говорится:
+
+// "found the needle at position "плюс indexон нашел иглу, так что:
+
+// findNeedle(['hay', 'junk', 'hay', 'hay', 'moreJunk', 'needle', 'randomJunk'])
+// должен вернуться "found the needle at position 5"(в COBOL "found the needle at position 6")
+
+
+
+
+function findNeedle(haystack) {
+    return 'found the needle at position ' + haystack.indexOf('needle');
+}
