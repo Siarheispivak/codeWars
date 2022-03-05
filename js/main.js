@@ -384,3 +384,169 @@ function remainder(n, m) {
     const cannonsReady = (gunners) => {
         return Object.entries(gunners).some((e) => e[1] === 'nay') ? 'Shiver me timbers!' : 'Fire!';
     }
+
+
+
+
+
+
+
+
+
+
+
+
+    // Write a function that checks if a given string(case insensitive) is a palindrome.
+    // Напишите функцию, которая проверяет, является ли заданная строка(без учета регистра) палиндромом.
+
+    function isPalindrome(x) {
+        x = x.toLowerCase();
+        return x === x.split('').reverse().join('');
+    }
+
+
+
+
+
+
+
+
+    // Build a function that returns an array of integers from n to 1 where n>0.
+
+    // Example : n=5 --> [5,4,3,2,1]
+    const reverseSeq = n => {
+        let answer = [];          //intialize an array
+
+        for (let i = n; i > 0; i--) {  //loop down from n to 1
+            answer.push(i);         //push each i to the answer array
+        }
+
+        return answer;            //return answer;
+    };
+
+
+
+
+
+
+
+
+
+
+
+
+    // Create a function that takes 2 integers in form of a string as an input, and outputs the sum (also as a string):
+
+    // Example: (Input1, Input2 -->Output)
+
+    // "4",  "5" --> "9"
+    // "34", "5" --> "39"
+    // "", "" --> "0"
+    // "2", "" --> "2"
+    // "-5", "3" --> "-2"
+    // Notes:
+
+    // If either input is an empty string, consider it as zero.
+
+    // Inputs and the expected output will never exceed the signed 32-bit integer limit (2^31 - 1)
+
+    function sumStr(a, b) {
+        let result = ((+a) + (+b)).toString();
+        return result;
+    }
+
+
+
+
+
+
+
+
+
+    // На каждую хорошую идею ката приходится немало плохих!
+
+    // В этом ката вам нужно проверить предоставленный массив (x) на наличие хороших идей «хорошо» и плохих идей «плохо». Если есть одна или две хорошие идеи, верните «Опубликовать!», если их больше 2, верните «Чую серию!». Если нет хороших идей, как это часто бывает, верните «Fail!».
+
+    // For every good kata idea there seem to be quite a few bad ones!
+    // In this kata you need to check the provided array(x) for good ideas 'good' and bad ideas 'bad'.If there are one or two good ideas, return 'Publish!', if there are more than 2 return 'I smell a series!'.If there are no good ideas, as is often the case, return 'Fail!'.
+    function well(x) {
+        let num = 0;
+        for (let i = 0; i < x.length; i++) {
+            x[i] === 'good' ? num++ : num;
+        }
+        if (num > 2) {
+            return 'I smell a series!';
+        } else if (num >= 1 && num <= 2) {
+            return 'Publish!';
+        } else {
+            return 'Fail!';
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+    //     Используйте метод replace() для удаления последнего символа из строки JavaScript
+    // Мы также можем удалить последний символ из строки с помощью функции replace().Он принимает регулярное выражение в качестве входных данных и замену результатов регулярного выражения.Символ $ используется для обозначения конца ввода.Значок.используется для сопоставления одного символа.Таким образом, регулярное выражение /.$ / можно использовать для получения последнего символа из строки.После этого мы заменяем его на '', т.е.пустым, чтобы удалить его из строки.
+
+    //         Description:
+    // Remove an exclamation mark from the end of a string.For a beginner kata, you can assume that the input data is always a string, no need to verify it.
+
+    //         Examples
+    //     remove("Hi!") === "Hi"
+    //     remove("Hi!!!") === "Hi!!"
+    //     remove("!Hi") === "!Hi"
+    //     remove("!Hi!") === "!Hi"
+    //     remove("Hi! Hi!") === "Hi! Hi"
+    //     remove("Hi") === "Hi"
+    //     Note
+    // Please don't post issue about difficulty or duplicate.
+
+
+    //     Описание:
+    // Убрать восклицательный знак в конце строки. Для начинающего ката можно считать, что входные данные всегда являются строкой, проверять ее не нужно.
+
+    // Примеры
+    // remove("Hi!") === "Hi"
+    // remove("Hi!!!") === "Hi!!"
+    // remove("!Hi") === "!Hi"
+    // remove("!Hi!") === "!Hi"
+    // remove("Hi! Hi!") === "Hi! Hi"
+    // remove("Hi") === "Hi"
+    // Примечание
+    // Пожалуйста, не публикуйте проблему о сложности или дублировании.
+
+
+    function remove(string) {
+
+        return string.replace(/!$/, '');
+
+    }
+
+    function remove(s) {
+        return s.endsWith('!') ? s.slice(0, -1) : s;
+    }
+
+    function remove(s) {
+        return s[s.length - 1] == '!' ? s.slice(0, -1) : s;
+    }
+
+    const remove = s =>
+        s.replace(/!$/, ``);
+
+
+    function remove(s) {
+        return s.charAt(s.length - 1) == "!" ? s.substr(0, s.length - 1) : s;
+    }
+
+    // Вот этот вроде понятный вариант для меня!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+    const remove = (string) => string.charAt(string.length - 1) === '!' ? string.slice(0, string.length - 1) : string;
+
+
